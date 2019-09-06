@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83b78b8b-b6ff-4d5f-b11a-f438aea8a596}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>face.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>CondaEnv|CondaEnv|tensorfull</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="images\Ariel_Sharon\Ariel_Sharon_0001.jpg" />
+    <Content Include="images\Ariel_Sharon\Ariel_Sharon_0002.jpg" />
+    <Content Include="images\Ariel_Sharon\Ariel_Sharon_0003.jpg" />
+    <Content Include="images\Ariel_Sharon\Ariel_Sharon_0004.jpg" />
+    <Content Include="images\Ariel_Sharon\Ariel_Sharon_0005.jpg" />
+    <Content Include="images\Ariel_Sharon\Ariel_Sharon_0006.jpg" />
+    <Content Include="images\Ariel_Sharon\Ariel_Sharon_0007.jpg" />
+    <Content Include="images\Ariel_Sharon\Ariel_Sharon_0008.jpg" />
+    <Content Include="images\Ariel_Sharon\Ariel_Sharon_0009.jpg" />
+    <Content Include="images\Ariel_Sharon\Ariel_Sharon_0010.jpg" />
+    <Content Include="images\Arnold_Schwarzenegger\Arnold_Schwarzenegger_0001.jpg" />
+    <Content Include="images\Arnold_Schwarzenegger\Arnold_Schwarzenegger_0002.jpg" />
+    <Content Include="images\Arnold_Schwarzenegger\Arnold_Schwarzenegger_0003.jpg" />
+    <Content Include="images\Arnold_Schwarzenegger\Arnold_Schwarzenegger_0004.jpg" />
+    <Content Include="images\Arnold_Schwarzenegger\Arnold_Schwarzenegger_0005.jpg" />
+    <Content Include="images\Arnold_Schwarzenegger\Arnold_Schwarzenegger_0006.jpg" />
+    <Content Include="images\Arnold_Schwarzenegger\Arnold_Schwarzenegger_0007.jpg" />
+    <Content Include="images\Arnold_Schwarzenegger\Arnold_Schwarzenegger_0008.jpg" />
+    <Content Include="images\Arnold_Schwarzenegger\Arnold_Schwarzenegger_0009.jpg" />
+    <Content Include="images\Arnold_Schwarzenegger\Arnold_Schwarzenegger_0010.jpg" />
+    <Content Include="images\Colin_Powell\Colin_Powell_0001.jpg" />
+    <Content Include="images\Colin_Powell\Colin_Powell_0002.jpg" />
+    <Content Include="images\Colin_Powell\Colin_Powell_0003.jpg" />
+    <Content Include="images\Colin_Powell\Colin_Powell_0004.jpg" />
+    <Content Include="images\Colin_Powell\Colin_Powell_0005.jpg" />
+    <Content Include="images\Colin_Powell\Colin_Powell_0006.jpg" />
+    <Content Include="images\Colin_Powell\Colin_Powell_0007.jpg" />
+    <Content Include="images\Colin_Powell\Colin_Powell_0008.jpg" />
+    <Content Include="images\Colin_Powell\Colin_Powell_0009.jpg" />
+    <Content Include="images\Colin_Powell\Colin_Powell_0010.jpg" />
+    <Content Include="images\Donald_Rumsfeld\Donald_Rumsfeld_0001.jpg" />
+    <Content Include="images\Donald_Rumsfeld\Donald_Rumsfeld_0002.jpg" />
+    <Content Include="images\Donald_Rumsfeld\Donald_Rumsfeld_0003.jpg" />
+    <Content Include="images\Donald_Rumsfeld\Donald_Rumsfeld_0004.jpg" />
+    <Content Include="images\Donald_Rumsfeld\Donald_Rumsfeld_0005.jpg" />
+    <Content Include="images\Donald_Rumsfeld\Donald_Rumsfeld_0006.jpg" />
+    <Content Include="images\Donald_Rumsfeld\Donald_Rumsfeld_0007.jpg" />
+    <Content Include="images\Donald_Rumsfeld\Donald_Rumsfeld_0008.jpg" />
+    <Content Include="images\Donald_Rumsfeld\Donald_Rumsfeld_0009.jpg" />
+    <Content Include="images\Donald_Rumsfeld\Donald_Rumsfeld_0010.jpg" />
+    <Content Include="images\George_W_Bush\George_W_Bush_0001.jpg" />
+    <Content Include="images\George_W_Bush\George_W_Bush_0002.jpg" />
+    <Content Include="images\George_W_Bush\George_W_Bush_0003.jpg" />
+    <Content Include="images\George_W_Bush\George_W_Bush_0004.jpg" />
+    <Content Include="images\George_W_Bush\George_W_Bush_0005.jpg" />
+    <Content Include="images\George_W_Bush\George_W_Bush_0006.jpg" />
+    <Content Include="images\George_W_Bush\George_W_Bush_0007.jpg" />
+    <Content Include="images\George_W_Bush\George_W_Bush_0008.jpg" />
+    <Content Include="images\George_W_Bush\George_W_Bush_0009.jpg" />
+    <Content Include="images\George_W_Bush\George_W_Bush_0010.jpg" />
+    <Content Include="images\Gerhard_Schroeder\Gerhard_Schroeder_0001.jpg" />
+    <Content Include="images\Gerhard_Schroeder\Gerhard_Schroeder_0002.jpg" />
+    <Content Include="images\Gerhard_Schroeder\Gerhard_Schroeder_0003.jpg" />
+    <Content Include="images\Gerhard_Schroeder\Gerhard_Schroeder_0004.jpg" />
+    <Content Include="images\Gerhard_Schroeder\Gerhard_Schroeder_0005.jpg" />
+    <Content Include="images\Gerhard_Schroeder\Gerhard_Schroeder_0006.jpg" />
+    <Content Include="images\Gerhard_Schroeder\Gerhard_Schroeder_0007.jpg" />
+    <Content Include="images\Gerhard_Schroeder\Gerhard_Schroeder_0008.jpg" />
+    <Content Include="images\Gerhard_Schroeder\Gerhard_Schroeder_0009.jpg" />
+    <Content Include="images\Gerhard_Schroeder\Gerhard_Schroeder_0010.jpg" />
+    <Content Include="images\Hugo_Chavez\Hugo_Chavez_0001.jpg" />
+    <Content Include="images\Hugo_Chavez\Hugo_Chavez_0002.jpg" />
+    <Content Include="images\Hugo_Chavez\Hugo_Chavez_0003.jpg" />
+    <Content Include="images\Hugo_Chavez\Hugo_Chavez_0004.jpg" />
+    <Content Include="images\Hugo_Chavez\Hugo_Chavez_0005.jpg" />
+    <Content Include="images\Hugo_Chavez\Hugo_Chavez_0006.jpg" />
+    <Content Include="images\Hugo_Chavez\Hugo_Chavez_0007.jpg" />
+    <Content Include="images\Hugo_Chavez\Hugo_Chavez_0008.jpg" />
+    <Content Include="images\Hugo_Chavez\Hugo_Chavez_0009.jpg" />
+    <Content Include="images\Hugo_Chavez\Hugo_Chavez_0010.jpg" />
+    <Content Include="images\Jacques_Chirac\Jacques_Chirac_0001.jpg" />
+    <Content Include="images\Jacques_Chirac\Jacques_Chirac_0002.jpg" />
+    <Content Include="images\Jacques_Chirac\Jacques_Chirac_0003.jpg" />
+    <Content Include="images\Jacques_Chirac\Jacques_Chirac_0004.jpg" />
+    <Content Include="images\Jacques_Chirac\Jacques_Chirac_0005.jpg" />
+    <Content Include="images\Jacques_Chirac\Jacques_Chirac_0007.jpg" />
+    <Content Include="images\Jacques_Chirac\Jacques_Chirac_0008.jpg" />
+    <Content Include="images\Jacques_Chirac\Jacques_Chirac_0009.jpg" />
+    <Content Include="images\Jacques_Chirac\Jacques_Chirac_0019.jpg" />
+    <Content Include="images\Jacques_Chirac\Jacques_Chirac_0020.jpg" />
+    <Content Include="images\Tony_Blair\Tony_Blair_0001.jpg" />
+    <Content Include="images\Tony_Blair\Tony_Blair_0002.jpg" />
+    <Content Include="images\Tony_Blair\Tony_Blair_0003.jpg" />
+    <Content Include="images\Tony_Blair\Tony_Blair_0004.jpg" />
+    <Content Include="images\Tony_Blair\Tony_Blair_0005.jpg" />
+    <Content Include="images\Tony_Blair\Tony_Blair_0006.jpg" />
+    <Content Include="images\Tony_Blair\Tony_Blair_0007.jpg" />
+    <Content Include="images\Tony_Blair\Tony_Blair_0008.jpg" />
+    <Content Include="images\Tony_Blair\Tony_Blair_0009.jpg" />
+    <Content Include="images\Tony_Blair\Tony_Blair_0010.jpg" />
+    <Content Include="images\Vladimir_Putin\Vladimir_Putin_0001.jpg" />
+    <Content Include="images\Vladimir_Putin\Vladimir_Putin_0002.jpg" />
+    <Content Include="images\Vladimir_Putin\Vladimir_Putin_0003.jpg" />
+    <Content Include="images\Vladimir_Putin\Vladimir_Putin_0004.jpg" />
+    <Content Include="images\Vladimir_Putin\Vladimir_Putin_0005.jpg" />
+    <Content Include="images\Vladimir_Putin\Vladimir_Putin_0006.jpg" />
+    <Content Include="images\Vladimir_Putin\Vladimir_Putin_0007.jpg" />
+    <Content Include="images\Vladimir_Putin\Vladimir_Putin_0008.jpg" />
+    <Content Include="images\Vladimir_Putin\Vladimir_Putin_0009.jpg" />
+    <Content Include="images\Vladimir_Putin\Vladimir_Putin_0010.jpg" />
+    <Content Include="model.png" />
+    <Content Include="requirements - Copy.txt" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="align.py" />
+    <Compile Include="data.py" />
+    <Compile Include="face.py" />
+    <Compile Include="model.py" />
+    <Compile Include="utils.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="images\Ariel_Sharon" />
+    <Folder Include="images\Arnold_Schwarzenegger" />
+    <Folder Include="images\Colin_Powell" />
+    <Folder Include="images\Donald_Rumsfeld" />
+    <Folder Include="images\George_W_Bush" />
+    <Folder Include="images\Gerhard_Schroeder" />
+    <Folder Include="images\Hugo_Chavez" />
+    <Folder Include="images\Jacques_Chirac" />
+    <Folder Include="images\Tony_Blair" />
+    <Folder Include="images\Vladimir_Putin" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|tensorfull" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
