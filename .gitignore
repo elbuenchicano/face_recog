@@ -1,3 +1,4 @@
 .idea
 *.iml
 *-checkpoint.ipynb
+/.vs/face-recognition/v15/.suo
