@@ -17,6 +17,10 @@ from align import AlignDlib
 
 from PIL import Image
 
+from sklearn.neighbors import NearestNeighbors
+
+
+
 class IdentityMetadata():
     def __init__(self, base, name, file):
         # dataset base directory
@@ -148,42 +152,46 @@ def main_():
     nn4_small2_pretrained.load_weights('weights/nn4.small2.v1.h5')
 
     metadata = load_metadata('images')
+         
 
     # Initialize the OpenFace face alignment utility
     alignment = AlignDlib('models/landmarks.dat')
 
-    # Load an image of Jacques Chirac
-    jc_orig = load_image(metadata[77].image_path())
+    ## Load an image of Jacques Chirac
+    #jc_orig = load_image(metadata[77].image_path())
 
 
 
-    #jc_orig = Image.open(metadata[77].image_path())
+    ##jc_orig = Image.open(metadata[77].image_path())
     
 
-    # Detect face and return bounding box
-    bb = alignment.getLargestFaceBoundingBox(jc_orig)
+    ## Detect face and return bounding box
+    #bb = alignment.getLargestFaceBoundingBox(jc_orig)
 
-    # Transform image using specified face landmark indices and crop image to 96x96
-    jc_aligned = alignment.align(96, jc_orig, bb, landmarkIndices=AlignDlib.OUTER_EYES_AND_NOSE)
+    ## Transform image using specified face landmark indices and crop image to 96x96
+    #jc_aligned = alignment.align(96, jc_orig, bb, landmarkIndices=AlignDlib.OUTER_EYES_AND_NOSE)
 
-    # Show original image
-    plt.subplot(131)
-    plt.imshow(jc_orig)
+    ## Show original image
+    #plt.subplot(131)
+    #plt.imshow(jc_orig)
 
-    # Show original image with bounding box
-    plt.subplot(132)
-    plt.imshow(jc_orig)
-    plt.gca().add_patch(patches.Rectangle((bb.left(), bb.top()), bb.width(), bb.height(), fill=False, color='red'))
+    ## Show original image with bounding box
+    #plt.subplot(132)
+    #plt.imshow(jc_orig)
+    #plt.gca().add_patch(patches.Rectangle((bb.left(), bb.top()), bb.width(), bb.height(), fill=False, color='red'))
 
-    # Show aligned image
-    plt.subplot(133)
-    plt.imshow(jc_aligned);
+    ## Show aligned image
+    #plt.subplot(133)
+    #plt.imshow(jc_aligned);
 
-    plt.show()
+    #plt.show()
 
-    embedded = np.zeros((metadata.shape[0], 128))
+    nn4_small2_pretrained.summary()
+    
+    embedded    = np.zeros((metadata.shape[0], 128))
 
     for i, m in enumerate(metadata):
+
         img = load_image(m.image_path())
         img = align_image(img, alignment)
         # scale RGB values to interval [0,1]
@@ -191,9 +199,72 @@ def main_():
         # obtain embedding vector for image
         embedded[i] = nn4_small2_pretrained.predict(np.expand_dims(img, axis=0))[0]
 
+    
+    
+    nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embedded)
 
-    show_pair(81, 83, embedded, metadata)
-    show_pair(85, 87, embedded, metadata)
+    template = 5
+    distances, indices = nbrs.kneighbors(embedded[template].reshape(1,128))
+
+    for i in indices[0]:
+        show_pair(template, i, embedded, metadata)
+    #show_pair(2, 33, embedded, metadata)
+    #show_pair(15, 16, embedded, metadata)
+    #show_pair(16, 18, embedded, metadata)
+    #show_pair(25, 32, embedded, metadata)
+
+
+
+
+################################################################################
+################################################################################
+def main_2():
+    # Initialize the OpenFace face alignment utility
+    alignment = AlignDlib('models/landmarks.dat')
+
+    cap = cv2.VideoCapture(0)
+
+    ret, frame = cap.read()
+    while (True):
+
+        #b,g,r = cv2.split(frame)
+        #frame = cv2.merge((r,g,b))
+
+        #frame = frame[...,::-1]
+
+        #frame = cv2.resize(frame, (250,250))
+
+       # cv2.imwrite('img.jpg', frame)
+
+        frame = load_image('img.jpg')
+        
+
+        bb = alignment.getLargestFaceBoundingBox(frame)
+
+        # Transform image using specified face landmark indices and crop image to 96x96
+        jc_aligned = alignment.align(96, frame, bb, landmarkIndices=AlignDlib.OUTER_EYES_AND_NOSE)
+
+        # Show original image
+        plt.subplot(131)
+        plt.imshow(frame)
+
+        # Show original image with bounding box
+        plt.subplot(132)
+        plt.imshow(frame)
+        plt.gca().add_patch(patches.Rectangle((bb.left(), bb.top()), bb.width(), bb.height(), fill=False, color='red'))
+
+        # Show aligned image
+        plt.subplot(133)
+        plt.imshow(jc_aligned);
+
+        plt.show()
+
+        if cv2.waitKey(1) & 0xFF == ord('y'): #save on pressing 'y' 
+            cv2.destroyAllWindows()
+            break
+        _, frame = cap.read()
+
+
 
 ################################################################################
 ################################################################################

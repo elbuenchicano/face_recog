@@ -128,6 +128,7 @@
     <Compile Include="data.py" />
     <Compile Include="face.py" />
     <Compile Include="model.py" />
+    <Compile Include="mtree.py" />
     <Compile Include="utils.py" />
   </ItemGroup>
   <ItemGroup>
